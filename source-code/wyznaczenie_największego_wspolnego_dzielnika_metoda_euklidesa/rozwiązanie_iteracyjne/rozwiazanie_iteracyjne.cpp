@@ -9,7 +9,7 @@ int NWD(int a, int b)
            a-=b; //lub a = a - b;
        else
            b-=a; //lub b = b-a
-    return a; // lub b - obie zmienne przechowuj¹ wynik NWD(a,b)
+    return a; // lub b - obie zmienne przechowujÂ¹ wynik NWD(a,b)
 }
 
 int main()
