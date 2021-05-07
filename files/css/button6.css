@@ -1,0 +1,305 @@
+/*
+
+[Default] Zielony Gradient: #134E5E => #71B280
+(Ciemny => Jasny)
+
+[R-] Czerwony Gradient: #1F1C18 => #8E0E00
+(Ciemny => Jasny)
+
+[B-] Niebieski Gradient: #373B44 => #4286f4
+(Ciemny => Jasny)
+
+[P-] Różowy Gradient: #493240 => #FF0099
+(Ciemny => Jasny)
+
+[O-] Pomarańczowy Gradient: #f83600 => #fe8c00
+(Ciemny => Jasny)
+
+[A-] Morski Gradient: #0ED2F7 => #B2FEFA
+(Ciemny => Jasny)
+
+https://mdigi.tools/color-shades/
+https://mdigi.tools/color-shades/#71b280
+
+2 pierwsze: 5. i 6. od prawej z 15
+2 ostatnie: 5. i 4. od lewej z 15
+
+*/
+
+.Acolor{
+    background: linear-gradient(to right, #e1e0ff, #d7fadd);
+}
+
+.Atry-again{
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+}
+
+.Atry-again:after{
+    content: '';
+    position: absolute;
+    left: 130px;
+    right: 130px;
+    height: 1px;
+    top: 100%;
+    background: #ebebeb;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+.Atry-again:hover:after{
+    left: 40%;
+    right: 40%;
+}
+
+.Awrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Abutton{
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    -webkit-appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    font-size: 14px;
+    height: 60px;
+    width: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 0px;
+    box-shadow: 0 0 0 white, 0 0 0 white;
+}
+
+.Abutton-text{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Abutton-circle{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0ED2F7, 0 0 20px #0ED2F7, 0 0 30px #0ED2F7;
+    transition: all 0.5s ease;
+}
+
+.Abutton-circle2{
+    top: auto;
+    bottom: 0;
+}
+
+.Abutton-circle3{
+    left: auto;
+    right: 0;
+    box-shadow: 0 0 10px #B2FEFA, 0 0 20px #B2FEFA, 0 0 30px #B2FEFA;
+}
+
+.Abutton-circle4{
+    left: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 10px #B2FEFA, 0 0 20px #B2FEFA, 0 0 30px #B2FEFA;
+}
+
+.Abutton:hover{
+    box-shadow: -15px 0 70px -15px #0ED2F7, 15px 0 70px -15px #B2FEFA;
+}
+
+.Abutton:hover .Abutton-circle1{
+    transform: translate(-15px, -15px) scale(0);
+}
+
+.Abutton:hover .Abutton-circle2{
+    transform: translate(-15px, 15px) scale(0);
+}
+
+.Abutton:hover .Abutton-circle3{
+    transform: translate(15px, -15px) scale(0);
+}
+
+.Abutton:hover .Abutton-circle4{
+    transform: translate(15px, 15px) scale(0);
+}
+
+.Abutton:hover .Abutton-circle{
+    box-shadow: none;
+}
+
+.Apopup{
+    opacity: 0;
+    visibility: hidden;
+    height: 400px;
+    width: 400px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease
+}
+
+.Apopup-inside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 black;
+    transition:
+            box-shadow 0.5s ease 0.7s,
+            border-radius 0.35s ease 0.7s;
+}
+
+.Abackgrounds{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Abackground{
+    --offset: 0;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA);
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
+    border-radius: 50%;
+}
+
+.Abackground2{
+    --offset: 10%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #057d94, #02978f);
+    transform: scale(0);
+    transition: all 0.5s ease 0.1s;
+}
+
+.Abackground3{
+    --offset: 20%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #0699b5, #02b9af);
+    z-index: 2;
+    transition: all 0.5s ease 0.2s;
+}
+
+.Abackground4{
+    --offset: 30%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #6be3fa, #68fdf5);
+    z-index: 3;
+    transition: all 0.5s ease 0.3s;
+}
+
+.Abackground5{
+    --offset: 40%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #8ce9fb, #89fdf7);
+    z-index: 4;
+    transition: all 0.5s ease 0.4s;
+}
+
+.Abackground6{
+    --offset: 40%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: white;
+    z-index: 5;
+    transition: all 0.8s ease 0.4s;
+}
+
+.Acontent{
+    --offset: 0;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.35s ease 0.75s;
+    z-index: 10;
+}
+
+.Acontent-wrapper{
+    text-align: center;
+}
+
+body.Aactive .Acontent{
+    opacity: 1;
+    transform: none;
+}
+
+body.Aactive .Apopup{
+    opacity: 1;
+    visibility: visible;
+}
+
+body.Aactive .Apopup-inside{
+    border-radius: 0;
+    box-shadow: -50px 0 200px -50px #0ED2F7, 50px 0 200px -50px #B2FEFA;
+}
+
+body.Aactive .Abackground{
+    transform: scale(1);
+}
+
+body.Aactive .Abackground6{
+    transform: scale(8);
+}

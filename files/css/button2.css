@@ -1,0 +1,305 @@
+/*
+
+[Default] Zielony Gradient: #134E5E => #71B280
+(Ciemny => Jasny)
+
+[R-] Czerwony Gradient: #1F1C18 => #8E0E00
+(Ciemny => Jasny)
+
+[B-] Niebieski Gradient: #373B44 => #4286f4
+(Ciemny => Jasny)
+
+[P-] Różowy Gradient: #493240 => #FF0099
+(Ciemny => Jasny)
+
+[O-] Pomarańczowy Gradient: #f83600 => #fe8c00
+(Ciemny => Jasny)
+
+[A-] Morski Gradient: #0ED2F7 => #B2FEFA
+(Ciemny => Jasny)
+
+https://mdigi.tools/color-shades/
+https://mdigi.tools/color-shades/#71b280
+
+2 pierwsze: 5. i 6. od prawej z 15
+2 ostatnie: 5. i 4. od lewej z 15
+
+*/
+
+.Rcolor{
+    background: linear-gradient(to right, #e1e0ff, #d7fadd);
+}
+
+.Rtry-again{
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+}
+
+.Rtry-again:after{
+    content: '';
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+    top: 100%;
+    background: #ebebeb;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+.Rtry-again:hover:after{
+    left: 40%;
+    right: 40%;
+}
+
+.Rwrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rbutton{
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    -webkit-appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    font-size: 14px;
+    height: 60px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 0px;
+    box-shadow: 0 0 0 white, 0 0 0 white;
+}
+
+.Rbutton-text{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Rbutton-circle{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #1F1C18, 0 0 20px #1F1C18, 0 0 30px #1F1C18;
+    transition: all 0.5s ease;
+}
+
+.Rbutton-circle2{
+    top: auto;
+    bottom: 0;
+}
+
+.Rbutton-circle3{
+    left: auto;
+    right: 0;
+    box-shadow: 0 0 10px #8E0E00, 0 0 20px #8E0E00, 0 0 30px #8E0E00;
+}
+
+.Rbutton-circle4{
+    left: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 10px #8E0E00, 0 0 20px #8E0E00, 0 0 30px #8E0E00;
+}
+
+.Rbutton:hover{
+    box-shadow: -15px 0 70px -15px #1F1C18, 15px 0 70px -15px #8E0E00;
+}
+
+.Rbutton:hover .Rbutton-circle1{
+    transform: translate(-15px, -15px) scale(0);
+}
+
+.Rbutton:hover .Rbutton-circle2{
+    transform: translate(-15px, 15px) scale(0);
+}
+
+.Rbutton:hover .Rbutton-circle3{
+    transform: translate(15px, -15px) scale(0);
+}
+
+.Rbutton:hover .Rbutton-circle4{
+    transform: translate(15px, 15px) scale(0);
+}
+
+.Rbutton:hover .Rbutton-circle{
+    box-shadow: none;
+}
+
+.Rpopup{
+    opacity: 0;
+    visibility: hidden;
+    height: 400px;
+    width: 400px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease
+}
+
+.Rpopup-inside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 black;
+    transition:
+            box-shadow 0.5s ease 0.7s,
+            border-radius 0.35s ease 0.7s;
+}
+
+.Rbackgrounds{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Rbackground{
+    --offset: 0;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
+    border-radius: 50%;
+}
+
+.Rbackground2{
+    --offset: 10%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #564e43, #990f00);
+    transform: scale(0);
+    transition: all 0.5s ease 0.1s;
+}
+
+.Rbackground3{
+    --offset: 20%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #695f52, #bb1200);
+    z-index: 2;
+    transition: all 0.5s ease 0.2s;
+}
+
+.Rbackground4{
+    --offset: 30%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #bcb4a9, #ff7566);
+    z-index: 3;
+    transition: all 0.5s ease 0.3s;
+}
+
+.Rbackground5{
+    --offset: 40%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #cbc5bc, #ff9488);
+    z-index: 4;
+    transition: all 0.5s ease 0.4s;
+}
+
+.Rbackground6{
+    --offset: 40%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: white;
+    z-index: 5;
+    transition: all 0.8s ease 0.4s;
+}
+
+.Rcontent{
+    --offset: 0;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.35s ease 0.75s;
+    z-index: 10;
+}
+
+.Rcontent-wrapper{
+    text-align: center;
+}
+
+body.Ractive .Rcontent{
+    opacity: 1;
+    transform: none;
+}
+
+body.Ractive .Rpopup{
+    opacity: 1;
+    visibility: visible;
+}
+
+body.Ractive .Rpopup-inside{
+    border-radius: 0;
+    box-shadow: -50px 0 200px -50px #1F1C18, 50px 0 200px -50px #8E0E00;
+}
+
+body.Ractive .Rbackground{
+    transform: scale(1);
+}
+
+body.Ractive .Rbackground6{
+    transform: scale(8);
+}

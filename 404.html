@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="https://2tihub.xyz/icons/2tihub.ico">
+
+		<title>Error 404</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,900" rel="stylesheet">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="https://2tihub.xyz/files/404/style.css" />
+		<style>
+			.overlay {
+				position:absolute;
+				top:0;
+				left:0;
+				height:100%;
+				width:100%;
+				background-color:#212529;
+				opacity:.5
+			}
+			.full-screen video{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				z-index: -1;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="full-screen">
+			<video src="https://2tihub.xyz/files/clapping.mp4" autoplay muted loop></video>
+		</div>
+		<div id="notfound">
+			<div class="overlay"></div>
+			<div class="notfound">
+				<div class="notfound-404">
+					<h1>404</h1>
+				</div>
+				<h2>Site Not Found!</h2>
+				<p>The Page you are looking for may have been deleted, changed or is currently unavailable.</p>
+				<a href="https://pricing.2tihub.xyz/">Go Back</a>
+			</div>
+		</div>
+	</body>
+</html>
