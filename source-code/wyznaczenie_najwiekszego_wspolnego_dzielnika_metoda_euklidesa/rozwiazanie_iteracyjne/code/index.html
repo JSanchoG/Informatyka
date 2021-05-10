@@ -110,7 +110,8 @@
    
     <span class="Cpink">return</span> <span class="Cgreen3">0</span><span class="Cwhite">;</span>
 <span class="Cwhite">}</span></pre></figure>
-                    <div class="topright"><i onclick="copy1()" id="cpbtn" class="mdi mdi-content-copy h2 cpbtn"></i></div>
+                    <div class="topright" style="cursor:pointer"><i onclick="copy1()" id="cpbtn" class="mdi mdi-content-copy h2 cpbtn"></i></div>
+                    <div class="topright" style="cursor:pointer;margin-right:40px" id="cpbtn2"><i onclick="function3()" class="mdi mdi-cloud-download-outline h2 cpbtn"></i></div>
                 </div>
               </div>
             </div>
@@ -142,10 +143,13 @@ function copy1() {
   var element = document.getElementById("cpbtn");
   element.classList.add("cpbtnC");
 }
-
 function classRemove1() {
   var element = document.getElementById("cpbtn");
   element.classList.remove("cpbtnC");
+}
+function function3() {
+    $("#cpbtn2").remove();
+    window.open('https://informatyka.2tihub.xyz/source-code/wyznaczenie_najwiekszego_wspolnego_dzielnika_metoda_euklidesa/rozwiazanie_iteracyjne/rozwiazanie_iteracyjne.zip')
 }
 </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
