@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jakub Gożuk">
+    <link rel="shortcut icon" href="https://2tihub.xyz/icons/2tihub.ico">
+    <title>Infomatyka</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://informatyka.2tihub.xyz/files/css/style.css">
+    <link rel="stylesheet" href="https://informatyka.2tihub.xyz/files/css/button.css">
+    <link rel="stylesheet" href="https://informatyka.2tihub.xyz/files/css/button2.css">
+    <link rel="stylesheet" href="https://informatyka.2tihub.xyz/files/css/button3.css">
+    <link rel="stylesheet" href="https://informatyka.2tihub.xyz/files/css/button4.css">
+    <link rel="stylesheet" href="https://informatyka.2tihub.xyz/files/css/button5.css">
+    <link rel="stylesheet" href="https://informatyka.2tihub.xyz/files/css/button6.css">
+    <script src="https://kit.fontawesome.com/9df9945f39.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      .Cpink {
+          color: #C586C0;
+      }
+      .Corange {
+          color: #CE9178;
+      }
+      .Cgreen {
+          color: #44C990;
+      }
+      .Cgreen2 {
+          color: #6A8A35;
+      }
+      .Cgreen3 {
+          color: #B5CEA8;
+      }
+      .Cblue {
+          color: #3F9CCB;
+      }
+      .Cblue2 {
+          color: #9CDCFE;
+      }
+      .Cwhite {
+          color: #D4D4D4;
+      }
+      .Cyellow {
+          color: #DCDCAA;
+      }
+      .topright {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        font-size: 18px;
+      }
+      .toast {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        font-size: 16px;
+      }
+      textarea {
+        position: absolute;
+        left: -100%;
+      }
+      .cpbtn {
+        background: -webkit-linear-gradient(#f83600 , #fe8c00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .cpbtnC {
+        background: -webkit-linear-gradient(#fe8c00 , #f83600);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h5 class="text-center pricing-table-subtitle">JAKUB GOŻUK</h5>
+        <h1 class="text-center pricing-table-title">Informatyka</h1>
+        <div class="row">
+            <div class="col-md-12">
+              <div class="card pricing-card pricing-plan-red">
+                <div class="card-body" style="text-align:left;padding-left:20px;padding-top:20px;padding-bottom:20px;background-color:#1E1E1E;border-radius:10px">
+<figure class="highlight" style="margin-bottom:0px"><pre style="margin-bottom:0px" id="pre1"><span class="Cpink">#include</span><span class="Corange">&lt;iostream&gt;</span>
+<span class="Cpink">using</span> <span class="Cblue">namespace</span> <span class="Cgreen">std</span><span class="Cwhite">;</span>
+<span class="Cpink">#include</span><span class="Corange">&lt;string&gt;</span>
+
+<span class="Cblue">int</span> <span class="Cyellow">main</span><span class="Cwhite">()</span>
+<span class="Cwhite">{</span>
+<span class="Cblue">int</span> <span class="Cblue2">i</span><span class="Cwhite">,</span><span class="Cblue2">j</span><span class="Cwhite">;</span>
+<span class="Cgreen">string</span> <span class="Cblue2">wyraz</span><span class="Cwhite">;</span>
+
+<span class="Cblue2">cout</span> <span class="Cyellow">&lt;&lt;</span> <span class="Corange">"Podaj wyraz, ktory chcesz sprawdzic: "</span><span class="Cwhite">;</span>
+<span class="Cblue2">cin</span> <span class="Cyellow">&gt;&gt;</span> <span class="Cblue2">wyraz</span><span class="Cwhite">;</span>
+<span class="Cgreen2">// i - pokazuje na kolejne litery wyrazu począwszy od początku, j - zaczyna od końca</span>
+<span class="Cgreen2">// funkcja length() wywołana na obiekcie string zwraca jego długość</span>
+<span class="Cpink">for</span> <span class="Cwhite">(</span><span class="Cblue2">i</span> <span class="Cwhite">=</span> <span class="Cgreen3">0</span><span class="Cwhite">,</span> <span class="Cblue2">j</span> <span class="Cwhite">=</span> <span class="Cblue2">wyraz</span><span class="Cwhite">.</span><span class="Cyellow">length</span><span class="Cwhite">()-</span><span class="Cgreen3">1</span><span class="Cwhite">;</span> <span class="Cblue2">i</span> <span class="Cwhite">&lt;</span> <span class="Cblue2">j</span><span class="Cwhite">;</span> <span class="Cblue2">i</span><span class="Cwhite">++,</span> <span class="Cblue2">j</span><span class="Cwhite">--)</span>
+<span class="Cwhite">{</span>
+<span class="Cpink">if</span> <span class="Cwhite">(</span><span class="Cblue2">wyraz</span><span class="Cyellow">[</span><span class="Cblue2">i</span><span class="Cyellow">]</span> <span class="Cwhite">!=</span> <span class="Cblue2">wyraz</span><span class="Cyellow">[</span><span class="Cblue2">j</span><span class="Cyellow">]</span><span class="Cwhite">)</span>
+<span class="Cpink">break</span><span class="Cwhite">;</span>
+<span class="Cwhite">}</span>
+<span class="Cpink">if</span> <span class="Cwhite">(</span><span class="Cblue">i</span> <span class="Cwhite">&lt;</span> <span class="Cblue2">j</span><span class="Cwhite">)</span>
+<span class="Cblue2">cout</span> <span class="Cyellow">&lt;&lt;</span> <span class="Corange">"Podany wyraz nie jest palindromem"</span> <span class="Cyellow">&lt;&lt; endl</span><span class="Cwhite">;</span>
+<span class="Cpink">else</span>
+<span class="Cblue2">cout</span> <span class="Cyellow">&lt;&lt;</span> <span class="Corange">"Podany wyraz jest palindromem"</span> <span class="Cyellow">&lt;&lt; endl</span><span class="Cwhite">;</span>
+
+<span class="Cpink">return</span> <span class="Cgreen3">0</span><span class="Cwhite">;</span>
+<span class="Cwhite">}</span></pre></figure>
+                    <div class="topright" style="cursor:pointer"><i onclick="copy1()" id="cpbtn" class="mdi mdi-content-copy h2 cpbtn"></i></div>
+                    <div class="topright" style="cursor:pointer;margin-right:40px" id="cpbtn2"><i onclick="function3()" class="mdi mdi-cloud-download-outline h2 cpbtn"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </main>
+    <div class="toast" data-autohide="false">
+        <div class="toast-header">
+        <img src="https://2tihub.xyz/icons/2tihub.ico" class="bd-placeholder-img rounded me-2" width="20" height="20" style="margin-right:8px"></img>
+          <strong class="mr-auto text-dark">2TI Hub</strong>
+          <small class="text-muted">Just now</small>
+          <button type="button" onclick="classRemove1()" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">Pomyślnie skopiowano element:<pre style="background-color:#1E1E1E;padding:8px;margin-top:8px"><span class="Cpink">#include</span><span class="Corange">&lt;iostream&gt;</span>
+<span class="Cpink">using</span> <span class="Cblue">namespace</span> <span class="Cgreen">std</span><span class="Cwhite">;</span>
+<span class="Cpink">#include</span><span class="Corange">&lt;string&gt;</span>
+
+<span class="Cwhite">...</span></pre></div>
+      </div>
+    </div>
+<script>
+function copy1() {
+  const copyText = document.getElementById("pre1").textContent;
+  const textArea = document.createElement('textarea');
+  textArea.textContent = copyText;
+  document.body.append(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  $('.toast').toast('show');
+  var element = document.getElementById("cpbtn");
+  element.classList.add("cpbtnC");
+}
+function classRemove1() {
+  var element = document.getElementById("cpbtn");
+  element.classList.remove("cpbtnC");
+}
+function function3() {
+    $("#cpbtn2").remove();
+    window.open('https://informatyka.2tihub.xyz/source-code/schemat_hornera/rozwiazanie_iteracyjne/rozwiazanie_iteracyjne.zip')
+}
+</script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
